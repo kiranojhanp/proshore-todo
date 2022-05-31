@@ -2,7 +2,7 @@
 
 ## Technologies used
 
-- Backend: NodeJS, Typescript, Mongoose, Docker
+- Backend: NodeJS, Typescript, Mongoose, Redis, Docker
 - Frontend: React, Redux toolkit, Typescript, TailwindCSS
 
 ## Introduction
@@ -28,7 +28,15 @@ For the time being, I have set up a script that runs backend and frontend in par
 
 ### Run mongodb
 
-1. Start mongodb from your desired location. I use `mongod --dbpath ~/data/db`
+1. Install mongodb from [mongodb installation page](https://www.mongodb.com/try/download/community)
+2. Start mongodb from your desired location. I use `mongod --dbpath ~/data/db`.
+
+### Run redis
+
+1. Start redis.
+
+- Install redis from [redis installation page](https://redis.io/docs/getting-started/installation/)
+- Run the redis according to above page. I use `brew services start redis`.
 
 ### clone the repo and fetch submodules
 
