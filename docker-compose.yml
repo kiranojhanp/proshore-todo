@@ -1,0 +1,65 @@
+version: "3"
+services:
+  # mongoDB service
+  mongo_db:
+    container_name: db_container
+    platform: linux/amd64
+    image: "mongo:latest"
+    restart: always
+    ports:
+      - 2717:27017
+    volumes:
+      - "mongo_db:/data/db"
+    networks:
+      - backend
+
+  # reactjs frontend service
+  frontend:
+    container_name: todo_web
+    platform: linux/amd64
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: kiranojhanp/todo_frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/usr/src/app
+    environment:
+      - WDS_SOCKET_PORT=3000
+      - NODE_ENV="development"
+      - PORT=3000
+      - CHOKIDAR_USEPOLLING=true
+
+  # nodejs backend service
+  backend:
+    container_name: todo_server
+    platform: linux/amd64
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: kiranojhanp/todo_server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/usr/src/app
+    environment:
+      MONGO_URI: "mongodb://mongo_db:2717"
+      API_PORT: "8000"
+      DB_NAME: "proshore-todo"
+      ACCESS_TOKEN_SECRET: "e3cf869c0078b7c3eba4d960a47f9f40a20838ce4e1733f6d1a849216bb49886"
+      REFRESH_TOKEN_SECRET: "db04e003bfb6b7709fe4e377b668dbd1686bdab4193997ee9b78f8ca6fdd7f36"
+      NODE_ENV: production
+      NAME: KiranOjha
+    depends_on:
+      - mongo_db
+    networks:
+      - backend
+      - frontend
+
+volumes:
+  mongo_db: {}
+
+networks:
+  backend:
+  frontend:
