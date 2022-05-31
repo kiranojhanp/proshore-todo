@@ -1,0 +1,22 @@
+{
+	"name": "proshore-todo",
+	"version": "1.0.0",
+	"description": "bootstrap todo application",
+	"scripts": {
+		"installDep:server": "cd backend && npm install",
+		"installDep:client": "cd frontend && npm install",
+		"start:server": "cd backend && npm start",
+		"start:client": "cd frontend && npm start"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kiranojhanp/proshore-todo.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/kiranojhanp/proshore-todo/issues"
+	},
+	"homepage": "https://github.com/kiranojhanp/proshore-todo#readme"
+}
