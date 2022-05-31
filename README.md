@@ -9,7 +9,7 @@
 
 - This repo basically contains two repos (frontend and backend) as submodules.
 - The usage of git submodules helps with the proper seperation of frontend and backend developement.
-- both repo contain individual `Dockerfiles`
+- both repos contain individual `Dockerfiles`
 - The `docker-compose.yml` in the runs them
 
 ## Expected result
