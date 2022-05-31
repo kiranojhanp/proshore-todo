@@ -15,15 +15,15 @@
 
 ## Expected result
 
-The expected outcome is to be able to serve the application with the command `docker-compose up`
+The expected outcome was to be able to serve the todo application with the command `docker-compose up`.
 
-## Problem
+## Problem occured
 
 There is a problem with create-react-app and docker which results to a build fail at the moment. I have been trying different solutions but haven't figured out the solution yet.
 
 ## Solution
 
-For the time being, I have set up a script that runs backend and frontend in parallel without the need of `Docker`. The `Dockerfile` and `docker-compose.yml` do not serve any purpose currently. I will update the repo after I find the fix.
+For the time being, I have set up a script that runs backend and frontend in parallel without the need of `Docker`. The `Dockerfile` and `docker-compose.yml` do not serve any purpose (except for viewing) currently. I will update the repo so it used docker after I find the fix.
 
 ## Steps to run the application
 
