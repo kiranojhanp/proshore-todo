@@ -12,11 +12,12 @@ There is a problem with create-react-app and docker which results to a build fai
 
 ## Steps to run the application
 
-### create a folder and clone both repos
-1. `cd Desktop && mkdir proshore-todo`
+### clone the repo and fetch submodules
+1. `cd Desktop`
+2. `git clone https://github.com/kiranojhanp/proshore-todo`
 2. `cd proshore-todo`
-3. `git clone https://github.com/kiranojhanp/proshore-todo-backend`
-4. `https://github.com/kiranojhanp/proshore-todo-frontend`
+3. `git submodule update --init --recursive`
+4. `git submodule update --recursive --remote`
 
 ### install dependencies
 1. `cd todo-backend && npm install && cd ..`
