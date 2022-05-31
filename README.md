@@ -1,3 +1,10 @@
+# Todo app assignment for proshore
+
+## Technologies used
+
+- Backend: NodeJS, Typescript, Mongoose, Docker
+- Frontend: React, Redux toolkit, Typescript, TailwindCSS
+
 ## Introduction
 
 - This repo basically contains two repos (frontend and backend) as submodules.
@@ -11,9 +18,17 @@ The expected outcome is to be able to serve the application with the command `do
 
 ## Problem
 
-There is a problem with create-react-app and docker which results to a build fail at the moment. I have been trying different solutions but haven't figured out the solution yet. So, For the time being, I recommend cloning both `backend` and `frontend` repos.
+There is a problem with create-react-app and docker which results to a build fail at the moment. I have been trying different solutions but haven't figured out the solution yet.
+
+## Solution
+
+For the time being, I have set up a script that runs backend and frontend in parallel without the need of `Docker`. The `Dockerfile` and `docker-compose.yml` do not serve any purpose currently. I will update the repo after I find the fix.
 
 ## Steps to run the application
+
+### Run mongodb
+
+1. Start mongodb from your desired location. I use `mongod --dbpath ~/data/db`
 
 ### clone the repo and fetch submodules
 
@@ -23,31 +38,6 @@ There is a problem with create-react-app and docker which results to a build fai
 4. `git submodule update --init --recursive`
 5. `git submodule update --recursive --remote`
 
-### install dependencies
+### start the application
 
-1. `cd todo-backend && npm install && cd ..`
-2. `cd todo-frontend && npm install && cd ..`
-
-### Run mongodb
-
-1. Start mongodb from your desired location. I use `mongod --dbpath ~/data/db`
-
-### Add environment variables for backend
-
-1. `touch backend/.env`
-2. Paste following data inside .env
-
-```
-MONGO_URI="mongodb://localhost:27017"
-API_PORT="8000"
-DB_NAME="proshore-todo"
-ACCESS_TOKEN_SECRET="e3cf869c0078b7c3eba4d960a47f9f40a20838ce4e1733f6d1a849216bb49886"
-REFRESH_TOKEN_SECRET="db04e003bfb6b7709fe4e377b668dbd1686bdab4193997ee9b78f8ca6fdd7f36"
-```
-
-### Run both frontend and backend
-
-- Open two terminals and run these simultaneously
-
-1. `cd todo-backend && npm start`
-2. `cd todo-frontend && npm start`
+1. `npm start`
