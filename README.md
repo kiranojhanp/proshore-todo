@@ -11,6 +11,7 @@
 - The usage of git submodules helps with the proper seperation of frontend and backend developement.
 - both repos contain individual `Dockerfiles`
 - The `docker-compose.yml` in the runs them
+- Majority of the code is self explainatory. Comments are added in few tricky parts.
 
 ## Expected result
 
