@@ -23,7 +23,7 @@ There is a problem with create-react-app and docker which results to a build fai
 
 ## Solution
 
-For the time being, I have set up a script that runs backend and frontend in parallel without the need of `Docker`. The `Dockerfile` and `docker-compose.yml` do not serve any purpose (except for viewing) currently. I will update the repo so it used docker after I find the fix.
+For the time being, I have set up a script that runs backend and frontend in parallel without the need of `Docker`. The `Dockerfile` and `docker-compose.yml` do not serve any purpose (except for viewing) currently. I will update the repo after i find the fix so that it uses docker.
 
 ## Steps to run the application
 
