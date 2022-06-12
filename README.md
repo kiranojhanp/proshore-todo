@@ -13,19 +13,23 @@
 - The `docker-compose.yml` in this repo runs them in a same container
 - Majority of the code is self explainatory. Comments are added in few tricky parts.
 
-## Expected result
+## How to use
 
-The expected outcome was to be able to serve the todo application with the command `docker-compose up`.
+There are two ways to run the application.
 
-## Problem occured
+### Using docker
+- `docker compose up` on the root 
 
-There is a problem with create-react-app and docker which results to a build fail at the moment. I have been trying different solutions but haven't figured out the solution yet.
+### Using npm
+- `npm start` on the root
 
-## Solution
-
-For the time being, I have set up a script that runs backend and frontend in parallel without the need of `Docker`. The `Dockerfile` and `docker-compose.yml` do not serve any purpose (except for viewing) currently. I will update the repo after i find the fix so that it uses docker.
 
 ## Steps to run the application
+
+### Using docker?
+No need to do anything the `docker compose up` takes care of everything
+
+### USing mongodb
 
 ### Run mongodb
 
